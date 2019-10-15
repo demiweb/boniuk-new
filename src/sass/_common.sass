@@ -3,11 +3,12 @@ body
   line-height: 1.4
   font-size: $fz
   min-width: 320px
-  font-family: 'proximanova', Arial, sans-serif
+  font-family: 'robotocondensed', sans-serif
+  font-weight: 300
   color: $c-text
   +no-scroll
-  +sm
-    font-size: $fz-sm-px
+  // +sm
+    // font-size: $fz-sm-px
 
 .icon
   display: inline-block
@@ -17,4 +18,74 @@ body
 .lazy
   &.is-loaded:not(.no-animation)
     animation: fadeIn 1s
+
+// .logo
+//   font-size: 36px
+//   color: $black
+//   display: inline-block
+//   border: 1px solid currentColor
+//   &__subttl
+//     position: absolute
+//     z-index: 1
+//     background-color: $white
+//   &--white
+//     color: $white
+
+.out
+  $this: &
+  &--page
+    html:not(.is-ie) &
+      min-height: 100vh
+      +flex(flex-start, normal, column)
+    #{$this}__content
+      @extend .container
+      @extend .container--sm
+      position: relative
+      +flex
+      html:not(.is-ie) &
+        flex-grow: 1
+        width: 100%
+      .main
+        flex-grow: 1
+
+.main
+  &--page
+    // height: 2000px
     
+.container
+  max-width: 1200px
+  padding-left: 15px
+  padding-right: 15px
+  margin-left: auto
+  margin-right: auto
+  &--sm
+    max-width: 1080px
+  &--md
+    max-width: 1110px
+
+.hr, hr
+  display: block
+  width: 100%
+  border-color: $gray-light
+  border-top: 1px solid
+  color: transparent
+  outline: none
+  height: 0
+  margin: 0
+  margin-top: 40px
+  +lg
+    margin-top: 30px
+  +md
+    margin-top: 15px
+
+.link
+  +cour
+  text-transform: uppercase
+  border-bottom: 1px solid currentColor
+  +tr(color .3s)
+  +hover
+    color: $accent
+
+
+// .s-text
+//   +

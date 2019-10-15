@@ -1,5 +1,36 @@
 <!-- begin header -->
 <header class="header">
-  hello from header
+  <div class="container container--md">
+    <div class="header__inner">
+      <div class="header__nav js-menu">
+        <button class="header__close js-menu-close"></button>
+        {% include "partials/_nav.html" %}
+
+        <div class="header__contacts-mob">
+          {{ mixins.list(
+            name = '',
+            modifications = { wrap: 'nav nav--sm', item: '', link: '' },
+            list = [
+              { item: 'TEl: +38 (044) 248 98 21' },
+              { link: 'pravo@boniuk.ua', href: 'mailto:pravo@boniuk.ua' },
+              { item: 'м. Київ, вул. Сурикова, 3-А, поверх 4' }
+            ]
+          ) }}
+        </div>
+      </div>
+      
+      <div class="header__lang">
+        {{ mixins.list(
+          name = 'lang',
+          modifications = { wrap: '', item: '', link: '' },
+          list = [
+            { link: 'ua', modLink: 'is-active' },
+            { item: '|' },
+            { link: 'en' }
+          ]
+        ) }}
+      </div>
+    </div>
+  </div>
 </header>
 <!-- end header -->

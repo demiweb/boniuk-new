@@ -1,0 +1,23 @@
+.article
+  p, ul, ol, h1, h2, h3, h4, h5, h6, img
+    margin-bottom: 30px
+    +md
+      margin-bottom: 15px
+  h3
+    @extend .title
+    @extend .title--h3
+    @extend .title--ttn
+    color: inherit
+  a
+    color: $accent
+    text-decoration: underline
+  &--col-3
+    column-gap: 30px
+    column-count: 3
+    +md
+      column-gap: 20px
+    +sm
+      column-gap: 0px
+      column-count: initial
+      max-height: 500px
+      overflow: auto

@@ -13,13 +13,15 @@
   <body {% if bodyClass %}class="{{ bodyClass }}"{% endif %}>
 
     <!-- BEGIN content -->
-    <div class="out{% if outClass %} {{ outClass }}{% endif %}">
-      {% include "partials/_header.html" %}
-      <!-- begin main -->
-      <main class="main{% if mainClass %} {{ mainClass }}{% endif %}">
-        {% block content %}{% endblock %}
-      </main>
-      <!-- end main -->      
+    <div class="out out--page{% if outClass %} {{ outClass }}{% endif %}">
+      <div class="out__content">
+        {% include "partials/_aside.html" %}
+        <!-- begin main -->
+        <main class="main main--page{% if mainClass %} {{ mainClass }}{% endif %}">
+          {% block content %}{% endblock %}
+        </main>
+        <!-- end main --> 
+      </div>     
       {% include "partials/_footer.html" %}
     </div>
     <!-- END content -->

@@ -1,0 +1,35 @@
+.slider
+  &__wrap
+    position: relative
+  &__prev, &__next
+    position: absolute
+    top: 50%
+    transform: translate(0, -50%)
+    z-index: 1
+  &__prev
+    left: -50px
+  &__next
+    right: -50px
+  &--items
+    &__wrap
+      +lg
+        padding-left: 30px
+        padding-right: 30px
+      +md
+
+      .slider
+        &__prev
+          +lg
+            left: -10px
+        &__next
+          +lg
+            right: -10px
+
+
+.prev, .next
+  +inline-flex(center, center)
+  color: $white
+  +tr(color .3s)
+  background-color: $black
+  width: 30px
+  height: 30px

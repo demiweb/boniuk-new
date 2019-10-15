@@ -1,0 +1,30 @@
+=scrollbar($background: $white)
+  &::-webkit-scrollbar
+    width: 3px
+  &::-webkit-scrollbar-track
+    background-color: $gray-light
+    outline: none
+  &::-webkit-scrollbar-thumb
+    background-color: $black
+    +tr(background-color .3s)
+    +hover
+      background-color: $gray-light
+
+.scrollbar
+  position: relative
+  overflow: auto
+  +scrollbar
+  &__inner
+    padding-right: 35px
+  &__track
+    position: absolute
+    width: 3px
+    bottom: 0
+    top: 0
+    right: 0
+    background-color: $gray-light
+  &__bar
+    position: absolute
+    width: 100%
+    right: 0
+    background-color: $black

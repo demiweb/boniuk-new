@@ -1,0 +1,83 @@
+.header
+  position: relative
+  z-index: 10
+  &__inner
+    +flex(flex-start, center)
+    padding-top: 14px
+    padding-bottom: 14px
+  &__nav
+    flex-grow: 1
+    +sm
+      position: fixed
+      z-index: 10
+      left: 0
+      right: 0
+      top: 0
+      bottom: 0
+      background-color: $white
+      padding: 15px
+      padding-top: 40px
+      overflow: auto
+      visibility: hidden
+      opacity: 0
+      +ready
+        +tr(visibility .3s, opacity .3s)
+      .nav
+        +notlast
+          border-bottom: 1px solid  $gray-light
+          margin-bottom: 30px
+          padding-bottom: 20px
+      &.is-active
+        visibility: visible
+        opacity: 1
+  &__lang
+    text-align: right
+    +sm
+      flex-grow: 1
+  &__close
+    +icon-close(20, 1, $black)
+    position: absolute
+    top: 15px
+    right: 15px
+    z-index: 1
+    display: none
+    +sm
+      display: block
+  &__contacts-mob
+    display: none
+    +sm
+      display: block
+
+
+.lang
+  li
+    @extend .title
+    @extend .title--h4
+    display: inline-block
+    color: $gray
+    +notlast
+      margin-right: 10px
+    // &:last-child
+    //   border-left: 1px solid $gray   
+    
+  a
+    display: block
+    // padding-left: 10px
+    // padding-right: 10px
+    +tr(color .3s)
+    +hover
+      color: $black
+    &.is-active
+      color: $black
+
+.page-header
+  padding-top: 15px
+  &__lang
+    text-align: right
+    margin-bottom: 30px
+    +md
+      margin-bottom: 15px
+  &__title
+    padding-bottom: 10px
+    border-bottom: 1px solid  $gray-light
+    margin-bottom: 12px

@@ -1,5 +1,42 @@
+{%set
+grid = [
+  { img: '01.jpg', title: 'Практика приватних клієнтів' },
+  { img: '02.jpg', title: 'Практика вирішення спорів' },
+  { img: '03.jpg', title: 'Практика кримінального 
+права та процесу ' },
+  { img: '04.jpg', title: 'команда' },
+  { img: '', logo: true },
+  { img: '05.jpg', title: 'Практика земельного права і нерухомості' },
+  { img: '06.jpg', title: 'прес-центр' },
+  { img: '07.jpg', title: 'контакти' }
+]
+%}
+
 <!-- begin hero -->
 <section class="hero">
-  <h1>hello from hero</h1>
+  <div class="container container--md">
+    <!-- begin hero-grid -->
+    <div class="hero-grid">
+      {% for i in grid %}
+      {% if i.logo %}    
+      <a href="#" class="hero-grid-item">
+      {# {% set logo = { mod: 'logo--white' } %}
+      {% include "partials/_logo.html" %} #}
+
+      <img class="js-lazy" alt="" src="" data-src="./img/logo-white.png"/>
+    </a>
+    {% else %}
+    <a href="#" class="hero-grid-item js-lazy" data-background-image="./img/hero/{{ i.img }}">
+      <span class="hero-grid-item__cover">{{ i.title }}</span>
+    </a>
+    {% endif %}
+    {% endfor %}
+  </div>
+  <!-- end hero-grid -->
+
+  <div class="hero__burger">
+    <button class="burger js-burger"><span></span></button>
+  </div>
+</div>
 </section>
 <!-- end hero -->

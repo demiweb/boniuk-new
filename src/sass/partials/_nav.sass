@@ -1,0 +1,89 @@
+.nav
+  li    
+    @extend .title
+    @extend .title--h4
+    display: inline-block
+    position: relative
+    +notlast
+      margin-right: 20px
+    +hover
+      > ul
+        visibility: visible
+        opacity: 1
+    +sm
+      display: block
+      padding-top: 10px
+      padding-bottom: 10px
+      +notlast
+        margin-right: 0
+    > ul
+      position: absolute
+      z-index: 1
+      top: 100%
+      left: 0
+      background-color: $white
+      width: 300px
+      visibility: hidden
+      padding-top: 20px
+      padding-bottom: 10px
+      opacity: 0
+      +ready
+        +tr(opacity .3s, visibility .3s)
+      +sm
+        visibility: unset
+        opacity: 1
+        position: static
+        padding-top: 10px
+        padding-bottom: 0
+        width: auto
+      li
+        display: block
+        padding-top: 5px
+        padding-bottom: 5px
+        padding-left: 10px
+        padding-right: 10px
+        +notlast
+          margin-right: 0
+        +before
+          content: '-'
+          display: inline-block
+          margin-right: .5em
+        +sm
+          padding-top: 10px
+          padding-bottom: 10px
+          padding-left: 0
+          &:last-child
+            padding-bottom: 0
+
+  a
+    +tr(color .3s)
+    +hover
+      color: $accent
+    &.is-active
+      color: $accent
+
+  &--sm
+    li
+      font-size: $fz
+      +sm
+        padding-top: 5px
+        padding-bottom: 5px
+    a
+      text-decoration: underline
+
+  &--aside
+    li
+      display: block
+      padding-top: 5px
+      padding-bottom: 5px
+      +notlast
+        margin-right: 0
+      > ul
+        visibility: unset
+        position: static
+        opacity: 1
+        padding-top: 0
+        padding-bottom: 0
+        width: auto
+        li
+          padding-left: 0

@@ -1,0 +1,24 @@
+{{ mixins.list(
+  name = 'nav',
+  modifications = { wrap: nav.mod, item: '', link: '' },
+  list = [
+    { link: 'головна', modLink: 'is-active' },
+    { link: 'практики', item: '
+      <ul>
+        <li><a href="#">практика вирішення спорів</a></li>
+        <li><a href="#">практика приватні клієнти</a></li>
+        <li><a href="#">практика кримінальне право та процес  </a></li>
+        <li><a href="#">Практика земельного права і нерухомості </a></li>
+      </ul>
+    ' },
+    { link: 'команда' },
+    { link: 'прес-центр', item: '
+      <ul>
+        <li><a href="#">новини</a></li>
+        <li><a href="#">публікації</a></li>
+      </ul>
+    ' },
+    { link: 'кар’єра' },
+    { link: 'контакти' }
+  ]
+) }}

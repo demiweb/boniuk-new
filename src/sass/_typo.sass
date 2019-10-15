@@ -2,7 +2,24 @@ small
   font-size: inherit
 
 h1, h2, h3, h4, h5, h6
-  font-weight: 400
+  font-weight: 300
 
 .title
-  +css-lock(21, 45, 320, 1399, font-size)
+  color: $black
+  text-transform: uppercase
+  display: block
+  line-height: 1
+  &--h2
+    font-size: em(24, 14)
+  &--h3
+    // +css-lock(16, 18, 320, 1399, font-size)
+    font-size: em(18, 14)
+  &--h4
+    font-size: em(16, 14)
+    // +css-lock(13, 16, 767, 1399, font-size)
+  &--ttn
+    text-transform: none
+  &--tdu
+    text-decoration: underline
+  &--inline
+    display: inline
