@@ -73,11 +73,18 @@
 .page-header
   padding-top: 15px
   &__lang
-    text-align: right
-    margin-bottom: 30px
-    +md
-      margin-bottom: 15px
+    text-align: right    
   &__title
     padding-bottom: 10px
     border-bottom: 1px solid  $gray-light
     margin-bottom: 12px
+  &__burger
+    display: none
+    +sm
+      display: block
+  &__top
+    margin-bottom: 30px
+    +md
+      margin-bottom: 15px
+    +sm
+      +flex(space-between, center)

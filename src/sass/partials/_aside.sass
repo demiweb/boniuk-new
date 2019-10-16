@@ -2,16 +2,28 @@
   position: sticky
   z-index: 10
   top: 0
-  // height: 100vh
+  float: left
   overflow: auto
-  // top: 0
-  // left: 0
-  // right: 0
-  // bottom: 0
   overflow: auto
   width: $aside-width
   padding-left: 15px
   padding-right: 30px
   padding-top: 15px
+  padding-bottom: 15px
+  background-color: $white
+  +ready
+    +tr(transform .3s)
+  +sm
+    transform: translate(calc(-100% - 15px), 0)
+    float: none
+    position: fixed
+    left: 0
+    width: 100%
+    bottom: 0
+    padding: 15px
+    &.is-active
+      transform: translate(0, 0)
   &__logo
     margin-bottom: 60px
+  &__close
+    @extend .header__close

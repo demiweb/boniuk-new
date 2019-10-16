@@ -1,0 +1,23 @@
+---
+title: news-one
+page: news-one
+header: {
+  title: Новації закону “Про концесії”,
+  breadcrumbs: {
+    list: [
+      { link: 'Головна' },
+      { item: '/' },
+      { link: 'новини' },
+      { item: '/' },
+      { link: 'Новації закону “Про концесії”', modLink: 'is-active' }
+    ]
+  }
+}
+---
+{% extends "layouts/_layout.html" %}
+
+{% block content %}
+  {% include "partials/_page-header.html" %}
+  
+  {% include "partials/sections/_s-news-one.html" %}
+{% endblock %}

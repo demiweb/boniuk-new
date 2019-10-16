@@ -1,15 +1,21 @@
 <!-- begin page-header -->
 <header class="page-header">
-  <div class="page-header__lang">
-    {{ mixins.list(
-      name = 'lang',
-      modifications = { wrap: '', item: '', link: '' },
-      list = [
-        { link: 'ua', modLink: 'is-active' },
-        { item: '|' },
-        { link: 'en' }
-      ]
-    ) }}
+  <div class="page-header__top">
+    <div class="page-header__burger">
+      <button class="burger js-burger" data-menu-target="aside"><span></span></button>
+    </div>
+
+    <div class="page-header__lang">
+      {{ mixins.list(
+        name = 'lang',
+        modifications = { wrap: '', item: '', link: '' },
+        list = [
+          { link: 'ua', modLink: 'is-active' },
+          { item: '|' },
+          { link: 'en' }
+        ]
+      ) }}
+    </div>
   </div>
 
   <div class="page-header__title">

@@ -1,5 +1,14 @@
 .news-item
   display: block
+  &__content
+    display: block
+  &__img
+    +cover
+    display: block
+    margin-bottom: 20px
+    padding-top: 60%
+    +md
+      margin-bottom: 10px
   &__title
     margin-bottom: 20px
     display: block
@@ -12,3 +21,19 @@
       margin-bottom: 10px
   &__link
     display: block
+
+.news-links
+  li
+    +notlast
+      margin-bottom: 20px
+      +md
+        margin-bottom: 10px
+  a
+    @extend .title
+    @extend .title--h3
+    @extend .title--ttn
+    @extend .title--tdu
+    @extend .title--inline
+    +tr(color .3s)
+    +hover
+      color: $accent

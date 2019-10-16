@@ -8,14 +8,14 @@ class Scrollbar {
   }
 
   init() {
-    if (this.container.classList.contains('is-init')) return;
+    if (this.container.classList.contains(Scrollbar.classNames.IS_INIT)) return;
 
     this.createElements();
     this.initPlugin();
   }
 
   destroy() {
-    if (!this.container.classList.contains('is-init') || !this.plugin) return;
+    if (!this.container.classList.contains(Scrollbar.classNames.IS_INIT) || !this.plugin) return;
     this.plugin.dispose();
     this.removeElements();
   }
@@ -52,7 +52,7 @@ class Scrollbar {
       root: this.container,
       scroller: this.inner,
       bar: this.bar,
-      barOnCls: 'is-init',
+      barOnCls: Scrollbar.classNames.IS_INIT,
     });
   }
 }
@@ -61,6 +61,7 @@ Scrollbar.classNames = {
   inner: 'scrollbar__inner',
   track: 'scrollbar__track',
   bar: 'scrollbar__bar',
+  IS_INIT: 'is-init',
 };
 
 export default function setScrollbar() {
@@ -69,16 +70,16 @@ export default function setScrollbar() {
 
   if (!containers.length) return;
 
-  let scroll;
+  let scrollbar;
 
   function initScroll() {
     containers.forEach((container) => {
       if (window.matchMedia('(max-width: 767px)').matches) {
-        scroll = new Scrollbar(container);
-        scroll.init();
+        scrollbar = new Scrollbar(container);
+        scrollbar.init();
       } else {
-        if (!scroll) return;
-        scroll.destroy();
+        if (!scrollbar) return;
+        scrollbar.destroy();
       }
     });
   }

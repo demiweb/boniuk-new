@@ -1,0 +1,21 @@
+---
+title: team
+page: team
+header: {
+  title: команда,
+  breadcrumbs: {
+    list: [
+      { link: 'Головна' },
+      { item: '/' },
+      { link: 'команда', modLink: 'is-active' }
+    ]
+  }
+}
+---
+{% extends "layouts/_layout.html" %}
+
+{% block content %}
+  {% include "partials/_page-header.html" %}
+  
+  {% include "partials/sections/_s-team.html" %}
+{% endblock %}

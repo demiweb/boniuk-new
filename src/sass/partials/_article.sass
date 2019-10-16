@@ -1,8 +1,9 @@
 .article
-  p, ul, ol, h1, h2, h3, h4, h5, h6, img
-    margin-bottom: 30px
-    +md
-      margin-bottom: 15px
+  p, ul, ol, h1, h2, h3, h4, h5, h6, img, li, figure
+    +notlast
+      margin-bottom: 25px
+      +md
+        margin-bottom: 15px
   h3
     @extend .title
     @extend .title--h3
@@ -11,6 +12,16 @@
   a
     color: $accent
     text-decoration: underline
+  ul
+    li
+      &::before
+        content: "\2022"
+        display: inline-block
+        margin-right: 2em
+  figure
+    img
+      width: 100%
+
   &--col-3
     column-gap: 30px
     column-count: 3

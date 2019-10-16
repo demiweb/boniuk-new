@@ -1,0 +1,57 @@
+.member
+  $this: &
+  display: block
+  +xs
+    text-align: center
+  &__img
+    +cover
+    padding-top: 135%
+    margin-bottom: 25px
+    +md
+      margin-bottom: 15px
+    +xs
+      padding-top: 60%
+      background-size: 40%
+      // background-position: 0 50%
+    +xss
+      padding-top: 80%
+      background-size: 50%
+  &__title
+    display: block
+  &__subttl
+    margin-bottom: 20px
+    +md
+      margin-bottom: 10px
+
+  &--hor
+    +flex(flex-start, normal, row, wrap)
+    +xs
+      display: block
+    #{$this}__img
+      width: calc(#{percentage(2/6)} - 30px)
+      margin-right: 30px
+      padding-top: 40%
+      margin-bottom: 0
+      // margin-right: 30px
+      +md
+        margin-right: 10px
+        width: calc(#{percentage(2/6)} - 10px)
+      +xs
+        width: auto
+        margin-bottom: 15px
+        padding-top: 60%
+      +xss
+        padding-top: 80%
+    #{$this}__content
+      +flex(center, normal, column)
+      width: calc(#{percentage(4/6)})
+      +xs
+        width: auto
+
+  &--sm
+    #{$this}__img
+      max-width: 165px
+      padding-top: 110%
+      +xs
+        max-width: none
+        padding-top: 60%

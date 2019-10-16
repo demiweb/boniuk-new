@@ -1,0 +1,19 @@
+.pagination
+  li
+    display: inline-block
+    vertical-align: middle
+  a
+    display: block
+    text-align: center
+    text-decoration: underline
+    min-width: 30px
+    padding: .4em
+    +tr(color .3s, background-color .3s)
+    &.is-active
+      background-color: $black
+      color: $white
+      text-decoration: none
+    +hover
+      background-color: $black
+      color: $white
+      text-decoration: none

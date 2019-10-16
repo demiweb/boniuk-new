@@ -1,0 +1,17 @@
+{% macro member(mod, title, subttl, text) %}
+<!-- begin member -->
+<div class="member{% if mod %} {{ mod }}{% endif %}">
+  <div class="member__img js-lazy" data-background-image="./img/member.jpg"></div>
+
+  <div class="member__content">
+    <div class="member__title">
+      <h3 class="title title--h3 title--tdu title--ttn">{{ title | safe }}</h3>
+    </div>
+
+    <div class="member__subttl">{{ subttl | safe }}</div>
+
+    <div class="member__text">{{ text | safe }}</div>
+  </div>
+</div>
+<!-- end member -->
+{% endmacro %}

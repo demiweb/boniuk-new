@@ -67,8 +67,9 @@ export default function toggleMenu() {
 
   document.addEventListener('click', (e) => {
     const btn = e.target.closest(`.${close}`);
-    const menu = e.target.classList.contains('js-menu') ? e.target : null;
-    const closeBtn = btn || menu;
+    // const menu = e.target.classList.contains('js-menu') ? e.target : null;
+    // const closeBtn = btn || menu;
+    const closeBtn = btn;
     if (!closeBtn) return;
 
     e.preventDefault();

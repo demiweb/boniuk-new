@@ -1,0 +1,20 @@
+<!-- begin section -->
+<section class="section section--page">
+  <div class="grid">
+    {% for i in range(0, 6) %}
+    <div class="grid__col grid__col-2-6">
+      {{ mixins.member(
+        mod = 'member--sm',
+        title = 'Ганна Шишко',
+        subttl = 'Керуючий партнер, адвокат',
+        text = '
+          <p>Office: <a href="tel:+330144882929">+33 (0)1 44 88 29 29</a></p>
+          <p>Fax: <a href="tel:+330144882920">+33 (0)1 44 88 29 20</a></p>
+          <p><a href="mailto:david.winter@alaris-law.com">david.winter@alaris-law.com</a></p>
+        '
+      ) }}
+    </div>
+    {% endfor %}
+  </div>
+</section>
+<!-- end section -->

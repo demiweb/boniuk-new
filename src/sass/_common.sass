@@ -41,17 +41,19 @@ body
       @extend .container
       @extend .container--sm
       position: relative
-      +flex
+      // +flex
+      +clr
       html:not(.is-ie) &
         flex-grow: 1
         width: 100%
-      .main
-        flex-grow: 1
 
 .main
   &--page
-    // height: 2000px
-    
+    float: left
+    width: calc(100% - #{$aside-width})
+    +sm
+      width: auto
+      float: none
 .container
   max-width: 1200px
   padding-left: 15px
@@ -77,6 +79,12 @@ body
     margin-top: 30px
   +md
     margin-top: 15px
+  &--mb
+    margin-bottom: 40px
+    +lg
+      margin-bottom: 30px
+    +md
+      margin-bottom: 15px
 
 .link
   +cour
@@ -86,6 +94,9 @@ body
   +hover
     color: $accent
 
-
-// .s-text
-//   +
+.list
+  li
+    &::before
+      content: '-'
+      display: inline-block
+      margin-right: .5em

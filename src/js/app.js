@@ -3,6 +3,7 @@ import 'core-js/features/array/from';
 import 'core-js/features/promise';
 import 'intersection-observer';
 import './lib/polyfill';
+import Stickyfill from 'stickyfilljs';
 
 import sayHello from './lib/sayHello';
 import setHTMLClassNames from './components/setHTMLClassNames';
@@ -15,6 +16,9 @@ document.addEventListener('DOMContentLoaded', () => {
   sayHello();
   setHTMLClassNames();
   setLazy();
+  const stickyEls = document.querySelectorAll('.js-sticky-polyfill');
+  Stickyfill.add(stickyEls);
+
   mySlider.init();
   setScrollbar();
   toggleMenu();

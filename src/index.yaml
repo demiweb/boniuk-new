@@ -3,3 +3,8 @@ ProjectTitle: boniuk
 PageList:
 - file: home.html
 - file: contacts.html
+- file: member.html
+- file: news.html
+- file: news-one.html
+- file: one-service.html
+- file: team.html
