@@ -11,6 +11,7 @@ import setLazy from './components/setLazy';
 import mySlider from './components/sliders/setSliders';
 import setScrollbar from './components/setScrollbar';
 import toggleMenu from './components/toggleMenu';
+import setAccordion from './components/setAccordion';
 
 document.addEventListener('DOMContentLoaded', () => {
   sayHello();
@@ -22,4 +23,5 @@ document.addEventListener('DOMContentLoaded', () => {
   mySlider.init();
   setScrollbar();
   toggleMenu();
+  setAccordion();
 });

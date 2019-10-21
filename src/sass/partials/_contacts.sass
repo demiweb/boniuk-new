@@ -1,8 +1,12 @@
 .contacts-block
-  &__block
+  &__item
+    +flex(flex-start, center, row, wrap)
     +notlast
-      margin-bottom: 20px
-      +md
-        margin-bottom: 10px
+      margin-bottom: 15px
     a
-      text-decoration: underline
+      +tr(color .3s)
+      +hover
+        color: $accent
+    .social
+      +notfirst
+        margin-left: 10px

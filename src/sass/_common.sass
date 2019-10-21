@@ -19,17 +19,7 @@ body
   &.is-loaded:not(.no-animation)
     animation: fadeIn 1s
 
-// .logo
-//   font-size: 36px
-//   color: $black
-//   display: inline-block
-//   border: 1px solid currentColor
-//   &__subttl
-//     position: absolute
-//     z-index: 1
-//     background-color: $white
-//   &--white
-//     color: $white
+
 
 .out
   $this: &
@@ -100,3 +90,28 @@ body
       content: '-'
       display: inline-block
       margin-right: .5em
+
+.btn
+  display: inline-block
+  border: 1px solid currentColor
+  padding: 0.3em 1.3em
+  text-decoration: underline
+  font-size: em(18, 14)
+  +tr(color .3s)
+  +hover
+    text-decoration: none
+    color: $accent
+
+.social
+  li
+    display: inline-block
+  a
+    +flex(center, center)
+    border: 1px solid currentColor
+    width: 25px
+    height: 25px
+    +tr(color .3s)
+    +hover
+      color: $accent
+    .icon
+      font-size: 1.1em

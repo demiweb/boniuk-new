@@ -2,45 +2,40 @@
 <section class="section section--page">
   <div class="section-block">
     <div class="section-block__left">
-      {# <img class="js-lazy" alt="" src="" data-src="./img/contacts.jpg"/> #}
       <!-- begin contacts-block -->
       <div class="contacts-block">
-        {# <div class="contacts-block__block">У вас з’явилися питання?</div> #}
 
-        <div class="contacts-block__block">
-          <p>TEL: +38 (044) 248 98 21</p>
+        <div class="contacts-block__item">TEL: +38 (044) 248 98 21</div>
+        <div class="contacts-block__item">
           <p>TEL: +38 (068) 166 86 84</p>
-          <p>Viber, WhatsApp, Telegram</p>
+          {{ mixins.list(
+            name = 'social',
+            modifications = { wrap: '', item: '', link: '' },
+            list = [
+            { link:  mixins.icon('whatsapp') },
+            { link:  mixins.icon('telephone') },
+            { link:  mixins.icon('telegram') }
+            ]
+          ) }}
         </div>
-        <div class="contacts-block__block">
-          <p><a href="mailto:pravo@boniuk.ua">pravo@boniuk.ua</a></p>
-          <p>м. Київ, вул. Сурикова, 3-А, поверх 3 - <a href="#">Дивитись на мапі</a></p>
+
+        <div class="contacts-block__item"><a href="mailto:pravo@boniuk.ua">pravo@boniuk.ua</a></div>
+        <div class="contacts-block__item">м. Київ, вул. Сурикова, 3-А, поверх 3 - <a href="#">Дивитись на мапі</a></div>
+        <div class="contacts-block__item">
+          {{ mixins.list(
+            name = 'social',
+            modifications = { wrap: '', item: '', link: '' },
+            list = [
+              { link:  mixins.icon('facebook') }
+            ]
+          ) }}
         </div>
+
 
 
       </div>
       <!-- end contacts-block -->
     </div>
-
-{#     <div class="section-block__right">
-      <!-- begin contacts-block -->
-      <div class="contacts-block">
-        <div class="contacts-block__block">У вас з’явилися питання?</div>
-
-        <div class="contacts-block__block">
-          <p>TEL: +38 (044) 248 98 21</p>
-          <p>TEL: +38 (068) 166 86 84</p>
-          <p>Viber, WhatsApp, Telegram</p>
-        </div>
-        <div class="contacts-block__block">
-          <p><a href="mailto:pravo@boniuk.ua">pravo@boniuk.ua</a></p>
-          <p>м. Київ, вул. Сурикова, 3-А, поверх 3 - <a href="#">Дивитись на мапі</a></p>
-        </div>
-
-
-      </div>
-      <!-- end contacts-block -->
-    </div> #}
   </div>
 </section>
 <!-- end section -->

@@ -1,0 +1,37 @@
+.accordion
+
+.accordion-item
+  &__title
+    @extend .title
+    @extend .title--h3
+    @extend .title--tdu
+    @extend .title--ttn
+    display: block
+    width: 100%
+    text-align: left
+    position: relative
+    padding: .9em 0
+    border-bottom: 1px solid  $gray-light
+    &::before
+      content: '+'
+      position: absolute
+      top: 50%
+      transform: translate(0, -50%)
+      right: 0
+      z-index: 1
+    &.is-active
+      margin-bottom: .9em
+      &::before
+        content: '-'
+  &__content
+    max-height: 0
+    overflow: hidden
+    p
+      +notlast
+        margin-bottom: 20px
+        +md
+          margin-bottom: 10px
+    &.is-active
+      max-height: none
+      overflow: visible
+

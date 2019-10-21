@@ -1,0 +1,21 @@
+---
+title: career
+page: career
+header: {
+  title: КАР’єра,
+  breadcrumbs: {
+    list: [
+      { link: 'Головна' },
+      { item: '/' },
+      { link: 'вирішення спорів', modLink: 'is-active' }
+    ]
+  }
+}
+---
+{% extends "layouts/_layout.html" %}
+
+{% block content %}
+  {% include "partials/_page-header.html" %}
+  
+  {% include "partials/sections/_s-career.html" %}
+{% endblock %}
