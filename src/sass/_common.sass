@@ -85,7 +85,10 @@ body
     color: $accent
 
 .list
+  text-align: justify
   li
+    +notlast
+      margin-bottom: 10px
     &::before
       content: '-'
       display: inline-block

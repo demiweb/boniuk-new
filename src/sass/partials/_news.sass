@@ -1,7 +1,10 @@
 .news-item
   display: block
   &__content
-    display: block
+    display: block 
+  &__date
+    padding-top: .2em   
+    text-transform: uppercase
   &__img
     +cover
     display: block
@@ -17,6 +20,7 @@
   &__text
     margin-bottom: 20px
     display: block
+    text-align: justify
     +md
       margin-bottom: 10px
   &__link

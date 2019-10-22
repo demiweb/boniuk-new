@@ -19,7 +19,7 @@ class MySlider {
         items: 1,
         gutter: 30,
         mouseDrag: true,
-        loop: true,
+        loop: false,
         nav: false,
         responsive: {
           576: {

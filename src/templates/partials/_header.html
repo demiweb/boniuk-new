@@ -7,17 +7,10 @@
         {% include "partials/_nav.html" %}
 
         <div class="header__contacts-mob">
-          {{ mixins.list(
-            name = '',
-            modifications = { wrap: 'nav nav--sm', item: '', link: '' },
-            list = [
-              { item: 'TEl: +38 (044) 248 98 21' },
-              { link: 'pravo@boniuk.ua', href: 'mailto:pravo@boniuk.ua' },
-              { item: 'м. Київ, вул. Сурикова, 3-А, поверх 4' }
-            ]
-          ) }}
+          {% include "partials/_contacts-block.html" %}
         </div>
       </div>
+    
       
       <div class="header__lang">
         {{ mixins.list(

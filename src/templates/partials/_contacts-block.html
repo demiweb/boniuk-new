@@ -1,0 +1,33 @@
+<!-- begin contacts-block -->
+<div class="contacts-block">
+
+  <div class="contacts-block__item">TEL: +38 (044) 248 98 21</div>
+  <div class="contacts-block__item">
+    <p>TEL: +38 (068) 166 86 84</p>
+    {{ mixins.list(
+      name = 'social',
+      modifications = { wrap: '', item: '', link: '' },
+      list = [
+      { link:  mixins.icon('whatsapp') },
+      { link:  mixins.icon('telephone') },
+      { link:  mixins.icon('telegram') }
+      ]
+    ) }}
+  </div>
+
+  <div class="contacts-block__item"><a href="mailto:pravo@boniuk.ua">pravo@boniuk.ua</a></div>
+  <div class="contacts-block__item">м. Київ, вул. Сурикова, 3-А, поверх 3 - <a href="#">Дивитись на мапі</a></div>
+  <div class="contacts-block__item">
+    {{ mixins.list(
+      name = 'social',
+      modifications = { wrap: '', item: '', link: '' },
+      list = [
+        { link:  mixins.icon('facebook') }
+      ]
+    ) }}
+  </div>
+
+
+
+</div>
+<!-- end contacts-block -->

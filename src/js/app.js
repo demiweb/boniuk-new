@@ -9,7 +9,7 @@ import sayHello from './lib/sayHello';
 import setHTMLClassNames from './components/setHTMLClassNames';
 import setLazy from './components/setLazy';
 import mySlider from './components/sliders/setSliders';
-import setScrollbar from './components/setScrollbar';
+// import setScrollbar from './components/setScrollbar';
 import toggleMenu from './components/toggleMenu';
 import setAccordion from './components/setAccordion';
 
@@ -21,7 +21,7 @@ document.addEventListener('DOMContentLoaded', () => {
   Stickyfill.add(stickyEls);
 
   mySlider.init();
-  setScrollbar();
+  // setScrollbar();
   toggleMenu();
   setAccordion();
 });
