@@ -1,8 +1,25 @@
 {%set
-jobs = [
-  {},
-  {},
-  {}
+form = [
+  {
+    name: 'input',
+    type: 'text',
+    placeholder: 'Ім’я',
+    fieldClass: ''
+  },
+  {
+    name: 'input',
+    type: 'email',
+    placeholder: 'E-mail',
+    fieldClass: ''
+  },
+  {
+    name: 'attach',
+    type: 'file',
+    mod: 'btn btn--full',
+    placeholder: '',
+    fieldClass: '',
+    label: { last: { title: 'Прикріпити файл', span: true } }
+  }
 ]
 %}
 
@@ -18,7 +35,7 @@ jobs = [
 
   <!-- begin accordion -->
   <div class="accordion js-accordion">
-    {% for i in jobs %}    
+    {% for i in range(0, 3) %}    
     <div class="accordion-item">
       <button class="accordion-item__title js-accordion-title">Помічний адвоката на повну ставку</button>
 
@@ -27,10 +44,37 @@ jobs = [
         <p>Помощник адвоката, стажировка у адвоката для сдачи экзамена или после экзамена. Законное трудоустройство, все бумаги для стажировки и сдачи экзамена для помощников адвокатов Требования юристов - уметь и иметь желание делать претензионно-исковую работу, представительство заинтересованностей в судах. В случае отсутствия умения выполнять претензионно-исковую работу - имеется возможность стажировки для обучения. Место работы Киев. Иногородним поможем организовать жилье недалеко от места работы</p>
         {% endfor %}
 
-        {{ mixins.btn(
-          title = 'Відправити резюме',
-          mod = ''
-        ) }}
+        <!-- begin form -->
+        <div class="form">
+          <form>
+            <div class="form__row">
+              {% for i in form %}
+              <div class="form__col">
+                {{ mixins.input(
+                  name = i.name,
+                  mod = i.mod,
+                  type = i.type,
+                  placeholder = i.placeholder,
+                  value = '',
+                  fieldClass = i.fieldClass,
+                  label = i.label
+                ) }}
+              </div>
+              {% endfor %}
+              <div class="form__col">
+                {{ mixins.btn(
+                  title = 'Відправити резюме',
+                  mod = 'btn--full',
+                  href = false
+                ) }}
+
+              </div>
+            </div>
+            
+          </form>
+        </div>
+        <!-- end form -->
+
       </div>
     </div>
   {% endfor %}

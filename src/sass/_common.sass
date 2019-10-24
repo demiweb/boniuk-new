@@ -83,6 +83,7 @@ body
   +tr(color .3s)
   +hover
     color: $accent
+    border-bottom: 0
 
 .list
   text-align: justify
@@ -95,15 +96,21 @@ body
       margin-right: .5em
 
 .btn
+  color: $black
   display: inline-block
   border: 1px solid currentColor
-  padding: 0.3em 1.3em
+  padding: 0.4em 
+  height: 40px
+  text-align: center
+  cursor: pointer
   text-decoration: underline
   font-size: em(18, 14)
   +tr(color .3s)
   +hover
     text-decoration: none
     color: $accent
+  &--full
+    width: 100%
 
 .social
   li
