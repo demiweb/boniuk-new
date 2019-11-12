@@ -12,6 +12,7 @@ import mySlider from './components/sliders/setSliders';
 // import setScrollbar from './components/setScrollbar';
 import toggleMenu from './components/toggleMenu';
 import setAccordion from './components/setAccordion';
+import setPopups from './components/setPopups';
 
 document.addEventListener('DOMContentLoaded', () => {
   sayHello();
@@ -24,4 +25,5 @@ document.addEventListener('DOMContentLoaded', () => {
   // setScrollbar();
   toggleMenu();
   setAccordion();
+  setPopups();
 });

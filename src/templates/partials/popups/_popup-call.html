@@ -1,0 +1,69 @@
+{%set
+fields = [
+  {
+    name: 'input',
+    type: 'text',
+    placeholder: 'Ваше ім’я',
+    fieldClass: ''
+  },
+  {
+    name: 'input',
+    type: 'email',
+    placeholder: 'Ваш e-mail',
+    fieldClass: ''
+  },
+  {
+    name: 'input',
+    type: 'tel',
+    mod: '',
+    value: '+38',
+    placeholder: '',
+    fieldClass: ''
+  },
+  {
+    name: 'textarea',
+    type: '',
+    placeholder: 'Зміст питання',
+    fieldClass: '',
+    fieldAttributes: { rows: 10, cols: 40 }
+  }
+]
+%}
+
+<!-- begin popup -->
+<div class="popup js-popup" data-popup="call">
+  <div class="popup__inner">
+    <button class="popup__close js-popup-close"></button>
+
+    <div class="popup__form">
+      <!-- begin form -->
+      <div class="form">
+        <form>
+          {% for i in fields %}
+          <div class="form__field">
+            {{ mixins.input(
+              name = i.name,
+              mod = '',
+              type = i.type,
+              placeholder = i.placeholder,
+              value = i.value,
+              fieldClass = '',
+              fieldAttributes = i.fieldAttributes
+            ) }}
+          </div>
+          {% endfor %}
+
+          <div class="form__field">
+            {{ mixins.btn(
+              title = "Зв'язатись з адвокатом",
+              mod = 'btn--full',
+              href = false
+            ) }}
+          </div>
+        </form>
+      </div>
+      <!-- end form -->
+    </div>
+  </div>
+</div>
+<!-- end popup -->

@@ -27,7 +27,14 @@
     ) }}
   </div>
 
-
+  <div class="contacts-block__item">
+    {{ mixins.btn(
+      title = "Зв'язатись з адвокатом",
+      mod = 'btn--full js-popup-open',
+      href = false,
+      attributes = { 'data-popup-target': 'call' }
+    ) }}
+  </div>
 
 </div>
 <!-- end contacts-block -->
